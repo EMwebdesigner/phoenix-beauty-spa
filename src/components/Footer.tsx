@@ -42,9 +42,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="text-center md:text-right">
+          <div className="text-center md:text-center">
             <h4 className="font-semibold mb-4">Síguenos</h4>
-            <div className="flex gap-4 justify-center md:justify-end">
+            <div className="flex gap-4 justify-center md:center">
               <a
                 href="#"
                 className="w-10 h-10 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full flex items-center justify-center transition-colors"
