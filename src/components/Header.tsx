@@ -39,19 +39,34 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <button onClick={() => scrollToSection("services")} className="text-foreground hover:text-primary transition-colors">
+          <button 
+            onClick={() => scrollToSection("services")} 
+            className="relative text-foreground hover:text-primary transition-all duration-300 hover:scale-105 after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-center"
+          >
             Servicios
           </button>
-          <button onClick={() => scrollToSection("about")} className="text-foreground hover:text-primary transition-colors">
+          <button 
+            onClick={() => scrollToSection("about")} 
+            className="relative text-foreground hover:text-primary transition-all duration-300 hover:scale-105 after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-center"
+          >
             Nosotros
           </button>
-          <button onClick={() => scrollToSection("gallery")} className="text-foreground hover:text-primary transition-colors">
+          <button 
+            onClick={() => scrollToSection("gallery")} 
+            className="relative text-foreground hover:text-primary transition-all duration-300 hover:scale-105 after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-center"
+          >
             Galería
           </button>
-          <button onClick={() => scrollToSection("contact")} className="text-foreground hover:text-primary transition-colors">
+          <button 
+            onClick={() => scrollToSection("contact")} 
+            className="relative text-foreground hover:text-primary transition-all duration-300 hover:scale-105 after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-center"
+          >
             Contacto
           </button>
-          <Button onClick={() => scrollToSection("booking")} className="bg-primary hover:bg-primary/90">
+          <Button 
+            onClick={() => scrollToSection("booking")} 
+            className="bg-primary hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          >
             Reservar
           </Button>
         </div>
