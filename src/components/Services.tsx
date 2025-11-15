@@ -1,31 +1,41 @@
 import { Sparkles, Scissors, Palette, Hand, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import serviceLashBrow from "@/assets/service-lash-brow.jpg";
+import serviceHair from "@/assets/service-hair.jpg";
+import serviceMakeup from "@/assets/service-makeup.jpg";
+import serviceNails from "@/assets/service-nails.jpg";
+import serviceFacial from "@/assets/service-facial.jpg";
 
 const services = [
   {
     icon: Sparkles,
     title: "Lash & Brow Lamination",
     description: "Realza tu mirada con pestañas y cejas perfectamente definidas y duraderas.",
+    image: serviceLashBrow,
   },
   {
     icon: Scissors,
     title: "Hair Styling",
     description: "Cortes, peinados y tratamientos profesionales para un cabello radiante.",
+    image: serviceHair,
   },
   {
     icon: Palette,
     title: "Maquillaje Profesional",
     description: "Looks personalizados para eventos especiales o el día a día.",
+    image: serviceMakeup,
   },
   {
     icon: Hand,
     title: "Manicura & Pedicura",
     description: "Cuidado completo de manos y pies con productos de alta calidad.",
+    image: serviceNails,
   },
   {
     icon: Heart,
     title: "Faciales & Spa",
     description: "Tratamientos rejuvenecedores para una piel luminosa y saludable.",
+    image: serviceFacial,
   },
 ];
 
@@ -46,14 +56,19 @@ const Services = () => {
             return (
               <Card
                 key={index}
-                className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/30"
+                className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 border-border/50 hover:border-primary/30 h-[400px]"
               >
-                <CardContent className="p-8 text-center">
-                  <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/50 group-hover:bg-primary/10 transition-colors">
-                    <Icon className="w-8 h-8 text-primary" />
+                <div 
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${service.image})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-espresso/95 via-espresso/70 to-espresso/30 group-hover:from-espresso/98 transition-all duration-500" />
+                <CardContent className="relative h-full p-8 flex flex-col justify-end text-center">
+                  <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-cream/20 backdrop-blur-sm border border-cream/30 group-hover:bg-gold/30 group-hover:border-gold transition-all duration-300 mx-auto">
+                    <Icon className="w-8 h-8 text-cream group-hover:text-gold transition-colors duration-300" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
+                  <h3 className="text-2xl font-semibold text-cream mb-3 group-hover:text-gold transition-colors duration-300">{service.title}</h3>
+                  <p className="text-cream/90 leading-relaxed">{service.description}</p>
                 </CardContent>
               </Card>
             );
