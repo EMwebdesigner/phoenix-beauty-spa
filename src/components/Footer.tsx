@@ -65,13 +65,13 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 pt-8">
-          <div className="flex items-center justify-around gap-4 opacity-90">
-            <div className="flex gap-2 items-center">
-                <img src={codedByLogo} alt="Coded by EM" className="h-8 w-8" /> 
-                <span>Coded by EM</span> 
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 opacity-90">
+            <div className="hidden md:block flex-1"></div>
+            <p className="text-center">&copy; {new Date().getFullYear()} Phoenix Beauty Spa. Todos los derechos reservados.</p>
+            <div className="flex gap-2 items-center flex-1 justify-center md:justify-end">
+              <img src={codedByLogo} alt="Coded by EM" className="h-8 w-8" /> 
+              <span>Coded by EM</span> 
             </div>
-            <p>&copy; {new Date().getFullYear()} Phoenix Beauty Spa. Todos los derechos reservados.</p>
-            <div className=""></div>
           </div>
         </div>
       </div>
