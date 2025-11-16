@@ -65,9 +65,13 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 pt-8">
-          <div className="flex items-center justify-center gap-4 opacity-90">
-            <img src={codedByLogo} alt="Coded by EM" className="h-8 w-8" />
+          <div className="flex items-center justify-around gap-4 opacity-90">
+            <div className="flex gap-2 items-center">
+                <img src={codedByLogo} alt="Coded by EM" className="h-8 w-8" /> 
+                <span>Coded by EM</span> 
+            </div>
             <p>&copy; {new Date().getFullYear()} Phoenix Beauty Spa. Todos los derechos reservados.</p>
+            <div className=""></div>
           </div>
         </div>
       </div>
