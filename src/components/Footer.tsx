@@ -1,5 +1,6 @@
 import { Instagram, Facebook } from "lucide-react";
 import phoenixLogo from "@/assets/phoenix-logo.png";
+import codedByLogo from "@/assets/coded-by-logo.png";
 
 const Footer = () => {
   return (
@@ -63,8 +64,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 pt-8 text-center opacity-90">
-          <p>&copy; {new Date().getFullYear()} Phoenix Beauty Spa. Todos los derechos reservados.</p>
+        <div className="border-t border-primary-foreground/20 pt-8">
+          <div className="flex items-center justify-center gap-4 opacity-90">
+            <img src={codedByLogo} alt="Coded by EM" className="h-8 w-8" />
+            <p>&copy; {new Date().getFullYear()} Phoenix Beauty Spa. Todos los derechos reservados.</p>
+          </div>
         </div>
       </div>
     </footer>
